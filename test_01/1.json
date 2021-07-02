@@ -1,0 +1,264 @@
+{
+  "portlet_01": {
+    "tabs": null,
+    "title": "全院效益分析",
+    "children": [
+      {
+        "conditions": [
+          {
+            "key": "kpiCodes",
+            "value": [
+              "010015"
+            ]
+          }
+        ]
+      },
+      {
+        "conditions": [
+          {
+            "key": "kpiCodes",
+            "value": [
+              "220001"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "收入分析",
+        "conditions": [
+          {
+            "key": "kpiCodes",
+            "value": [
+              "010015",
+              "220001",
+              "220002"
+            ]
+          }
+        ]
+      }
+    ],
+    "portletId": 0
+  },
+  "portlet_02": {
+    "tabs": [
+      {
+        "title": "全部",
+        "value": [
+          "020014",
+          "050002"
+        ]
+      },
+      {
+        "title": "门诊",
+        "value": [
+          "020014"
+        ]
+      },
+      {
+        "title": "住院",
+        "value": [
+          "050002"
+        ]
+      }
+    ],
+    "title": "院长驾驶舱",
+    "children": [
+      {
+        "portletId": 1,
+        "conditions": [
+          {
+            "key": "kpiCodes"
+          },
+          {
+            "key": "groupBy",
+            "value": "province"
+          }
+        ]
+      },
+      {
+        "portletId": 15,
+        "conditions": [
+          {
+            "key": "kpiCodes"
+          },
+          {
+            "key": "groupBy",
+            "value": "city"
+          },
+          {
+            "key": "ParamValue",
+            "value": "***"
+          }
+        ]
+      }
+    ]
+  },
+  "portlet_03": {
+    "tabs": null,
+    "title": "全院工作量",
+    "children": [
+      {
+        "portletId": 3,
+        "conditions": [
+          {
+            "key": "kpiCodes",
+            "value": [
+              "020014"
+            ]
+          },
+          {
+            "key": "groupBy",
+            "value": "critical"
+          }
+        ]
+      },
+      {
+        "portletId": 4,
+        "conditions": [
+          {
+            "key": "kpiCodes",
+            "value": [
+              "230001"
+            ]
+          },
+          {
+            "key": "groupBy",
+            "value": "critical"
+          }
+        ]
+      },
+      {
+        "tabs": [
+          {
+            "title": "门急诊人次"
+          },
+          {
+            "title": "出院人次"
+          }
+        ],
+        "children": [
+          {
+            "portletId": 6,
+            "conditions": [
+              {
+                "key": "kpiCodes",
+                "value": [
+                  "020014"
+                ]
+              }
+            ]
+          },
+          {
+            "portletId": 7,
+            "conditions": [
+              {
+                "key": "kpiCodes",
+                "value": [
+                  "050002"
+                ]
+              }
+            ]
+          }
+        ],
+        "portletId": 5
+      }
+    ],
+    "portletId": 2,
+    "context_menus": null
+  },
+  "portlet_04": {
+    "title": "病种分布",
+    "children": [
+      {
+        "portletId": 9,
+        "conditions": [
+          {
+            "key": "kpiCodes",
+            "value": [
+              "020015",
+              "020016",
+              "230005"
+            ]
+          },
+          {
+            "key": "groupBy",
+            "value": "major_diag"
+          }
+        ]
+      },
+      {
+        "portletId": 10,
+        "conditions": [
+          {
+            "key": "kpiCodes",
+            "value": [
+              "020020",
+              "020019",
+              "230003"
+            ]
+          },
+          {
+            "key": "groupBy",
+            "value": "major_diag"
+          }
+        ]
+      }
+    ],
+    "portletId": 8
+  },
+  "portlet_05": {
+    "url": "/api/sankey",
+    "tabs": [
+      {
+        "title": "门诊",
+        "visitType": "Outpatient"
+      },
+      {
+        "title": "住院",
+        "visitType": "Inpatient"
+      }
+    ],
+    "title": "患者流向图",
+    "portletId": 11
+  },
+  "portlet_06": {
+    "title": "手术和操作情况",
+    "children": [
+      {
+        "portletId": 13,
+        "conditions": [
+          {
+            "key": "kpiCodes",
+            "url": [
+              {
+                "key": "080003",
+                "value": "http://172.16.10.91:8087/"
+              }
+            ],
+            "value": [
+              "080063",
+              "080064",
+              "080003"
+            ]
+          }
+        ]
+      },
+      {
+        "portletId": 14,
+        "conditions": [
+          {
+            "key": "kpiCodes",
+            "value": [
+              "080001"
+            ]
+          },
+          {
+            "key": "groupBy",
+            "value": "operation"
+          }
+        ]
+      }
+    ],
+    "portletId": 12
+  }
+}
