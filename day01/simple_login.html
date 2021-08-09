@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+</head>
+
+<label>用户名：</label>
+<input id="__username" type="text" name="username"/><br>
+
+<label>密码：</label>
+<input id="__pwd" type="password" name="pwd"/><br>
+
+<label>性别：</label>
+<input id="__ra1" type="radio" name="sex" checked>男</input>
+<input id="__ra2" type="radio" name="sex">女</input><br>
+
+<label>住址：</label>
+<select id="__se1" name="address">
+    <option name="city">广东省</option>
+    <option name="city">上海市</option>
+</select>
+<select id="__se2" name="arex">
+    <option name="city_2">东北区</option>
+    <option name="city_2">西北区</option>
+</select><br>
+
+<label>爱好：</label>
+<input id="_001" type="checkbox" name="aihao">篮球</input>
+<input id="_002" type="checkbox" name="aihao">看电影</input>
+<input id="_003" type="checkbox" name="aihao">玩游戏</input><br>
+
+<label>备注：</label><br>
+<textarea id="_004" rows="3" cols="20"></textarea>
+<br>
+<button id="reset" type="reset" name="reset">重置</button>
+<button id="commit" type="button"  name="commit">提交</button>
+
+</body>
+<script>
+
+    funtion info(){
+        user_name=document.getElementById("__username").value;
+        alert(user_name);
+    }
+    info()
+</script>
+</html>
