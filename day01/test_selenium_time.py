@@ -17,13 +17,17 @@ driver.get(url)
 # 窗口最大化
 driver.maximize_window()
 
+# 强制等待
 # time.sleep(3)
+
+# 隐性等待，全局生效
 # driver.implicitly_wait(10)
 
 # 点击【登录】
 driver.find_element_by_xpath("//a[@id='s-top-loginbtn']").click()
 
 xpath = "//p[@id='TANGRAM__PSP_11__footerULoginBtn']"
+
 # 显性等待10s
 web_locted = EC.visibility_of_element_located((By.XPATH,xpath))
 WebDriverWait(driver,10).until(web_locted)
